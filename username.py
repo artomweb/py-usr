@@ -2,13 +2,14 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 import time
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.ui import WebDriverWait # available since 2.4.0
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
 import re
 
 
-instausr = False
+instusr = False
+twitusr = False
 username = raw_input ("Enter a username:")
 
 driver = webdriver.Chrome('./chromedriver')
@@ -33,9 +34,6 @@ except NoSuchElementException:
         print ("Username Exists on Instagram")
         instausr = True
 
-        
-        
-
       else:
         print ("elem2 found but not displayed")
   except:
@@ -57,7 +55,7 @@ try:
   elem1 = driver.find_element_by_xpath('/html/body/div[2]/div/h1')
   if elem1.is_displayed():
     print ("Username not found on Twitter")
-    twitausr = False
+    twitusr = False
   else:
     print ("elem1 found but not displayed")
 
