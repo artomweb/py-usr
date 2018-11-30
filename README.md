@@ -7,7 +7,7 @@ Unzip ChromeDriver
     
 MacOs Terminal:
 
-    Unzip chromedriver_mac64.zip
+    unzip chromedriver_mac64.zip
 
 install selenium
 
